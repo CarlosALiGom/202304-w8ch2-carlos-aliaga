@@ -1,29 +1,21 @@
-import { useState } from "react";
 import { PersonalDataStructure } from "../../types";
 import PersonalDataFormStyled from "./PersonalDataFormStyled";
 
-const PersonalDataForm = (): React.ReactElement => {
-  const initialPersonalData: PersonalDataStructure = {
-    name: "",
-    lastname: "",
-    email: "",
-    birthday: "",
-  };
+interface PersonalDataProps {
+  PersonalData: PersonalDataStructure;
+  setPersonalData: React.Dispatch<React.SetStateAction<PersonalDataStructure>>;
+}
 
-  const [PersonalData, setPersonalData] = useState(initialPersonalData);
-
+const PersonalDataForm = ({
+  PersonalData,
+  setPersonalData,
+}: PersonalDataProps): React.ReactElement => {
   const onChangePersonalData = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPersonalData({
       ...PersonalData,
       [event.target.id]: event.target.value,
     });
   };
-
-  const isValidForm =
-    PersonalData.name !== "" &&
-    PersonalData.lastname !== "" &&
-    PersonalData.email !== "" &&
-    PersonalData.birthday !== "";
 
   return (
     <PersonalDataFormStyled autoComplete="off">
@@ -76,9 +68,6 @@ const PersonalDataForm = (): React.ReactElement => {
           value={PersonalData.email}
         />
       </div>
-      <button className="form__button" type="submit" disabled={!isValidForm}>
-        Next
-      </button>
     </PersonalDataFormStyled>
   );
 };

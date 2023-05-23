@@ -1,5 +1,12 @@
+import PersonalDataForm from "../PersonalDataForm/PersonalDataForm";
+import AppStyled from "./AppStyled";
 const App = (): JSX.Element => {
-  return <p>Hello world!</p>;
+  return (
+    <AppStyled>
+      <h1 className="title">!Tinder</h1>
+      <PersonalDataForm />
+    </AppStyled>
+  );
 };
 
 export default App;

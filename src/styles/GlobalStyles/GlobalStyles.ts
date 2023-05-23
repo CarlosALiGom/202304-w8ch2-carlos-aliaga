@@ -13,7 +13,6 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: #1D1C64;
   }
 
   a {

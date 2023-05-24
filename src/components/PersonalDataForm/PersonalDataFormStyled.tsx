@@ -11,7 +11,7 @@ const PersonalDataFormStyled = styled.form`
   color: #ffffff;
   border: 4px solid #ffffff;
   border-radius: 20px;
-  gap: 10px;
+  gap: 15px;
 
   .form__control {
     display: flex;

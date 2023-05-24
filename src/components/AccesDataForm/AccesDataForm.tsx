@@ -44,13 +44,13 @@ const AccesDataForm = ({
         />
       </div>
       <div className="form__control">
-        <label className="form__label" htmlFor="repeatPassword">
+        <label className="form__label" htmlFor="repeatPasword">
           Repeat Pasword:
         </label>
         <input
           className="form__input"
           type="password"
-          id="repeatPassword"
+          id="repeatPasword"
           onChange={onChangeAccesData}
           value={AccesData.repeatPasword}
         />

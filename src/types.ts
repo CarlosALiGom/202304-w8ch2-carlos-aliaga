@@ -17,3 +17,9 @@ export const initialPersonalData: PersonalDataStructure = {
   email: "",
   birthday: "",
 };
+
+export const initialAccesData: AccesDataStructure = {
+  username: "",
+  password: "",
+  repeatPasword: "",
+};
